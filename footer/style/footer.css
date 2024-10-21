@@ -1,0 +1,75 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+html{
+    --headerColorText:#0102fd ;
+    --headerMainColor: #ffc10a;
+    --whiteColor : #ffffff;
+    --backgroundColorLocationPhoto : #f2f2f2 ;
+    --footerBackgroundColor : #1E344F;
+}
+
+
+footer{
+   background-color: var(--footerBackgroundColor);
+   color: var(--whiteColor);
+   padding: 20px;
+   display: flex;
+   justify-content: space-between;
+   text-align: justify;
+   margin-top: 40px;
+}
+
+footer span{
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /*border: 1px solid white;*/
+}
+
+footer i{
+    font-size: 20px;
+    color: var(--headerMainColor);
+}
+
+
+
+.mentions-legales, .nos-services, .reseaux-sociaux {
+    /*border: 2px solid white;*/
+    margin: 5px;
+}
+
+.reseaux-sociaux a{
+    color: var(--whiteColor);
+}
+
+.email, .lien-facebook, .tel-whatsapp, .tel-phone, .siege-drone, .teletravail, .service-item{
+    display: flex;
+    align-items: center;
+    /*border: 1px solid yellow;*/
+    margin-top: 5px;
+}
+
+.nos-services i{
+    font-size: 15px;
+}
+
+.logo-entreprise-nom{
+    display: flex;
+    align-items: flex-end;
+}
+
+.logo-entreprise-nom img{
+    width: 200px;
+    height: 100px;
+    margin-right: 15px;
+}
+
+.titre-item{
+    text-align: center;
+}

@@ -1,0 +1,134 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+html{
+    --headerColorText:#0102fd ;
+    --headerMainColor: #ffc10a;
+    --whiteColor : #ffffff;
+    --blackColor: #000000;
+}
+/*header{
+    opacity: 1;
+}*/
+.header-blank{
+    height: 70px;
+    width: 100%;
+    background-color: var(--whiteColor);
+}
+
+.location-main-content{
+    /*border: 10px solid black;*/
+    margin: 100px 10px 10px 10px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+   /*height: 50px;*/
+    /*width: 100%;*/
+}
+
+.pub-location{
+    border-radius: 30px;
+    border: none;
+    /*border: 2px solid red;*/
+
+    height: 390px;
+    width: 455px;
+    margin: 8px;
+    position: relative;
+    cursor: pointer;
+}
+
+.pub-location:hover{
+   opacity: 0.7;
+}
+.pub-location img{
+    height: 390px;
+    width: 455px;
+    border-radius: 30px;
+
+}
+
+.pub-location-information{
+    width: 100%;
+    /*height: 50px;*/
+    padding: 5px;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    /*background-color: var(--whiteColor);
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0.5;*/
+    background-color : rgba(255,255,255,0.7); 
+    z-index: 10;
+    border-radius: 0px 0px 30px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.pub-location-information h2{
+    font-weight: bold;
+    opacity: 1;
+    color: var(--headerColorText);
+    opacity: 1;
+    font-size: large;
+}
+
+/*.pub-location-information div{
+    border: 1px solid black;
+
+}*/
+
+.pub-localite-date{
+    display: flex;
+    flex-direction: column;
+    /*align-items: center;*/
+    margin-top: 5px;
+    /*border: 1px solid black;*/
+   /* width: 100%;*/
+}
+
+.pub-localite-date span{
+    /*border: 1px solid black;*/
+    height: 30px;
+    width: 30px;
+    margin-right: 10px;
+}
+
+.pub-localite-date span i{
+    font-size: 20px;
+    color: var(--blackColor);
+
+}
+
+.pub-localite-date p{
+    /*border: 1px solid black;*/
+    color: var(--blackColor);
+}
+
+.pub-localite, .pub-date{
+    display: flex;
+    align-items: center;
+}
+
+.loyer-prix{
+    z-index: 12;
+    background-color: var(--headerMainColor);
+    /*border-radius: 30px;*/
+    color: var(--whiteColor);
+    opacity: 1;
+    border-radius: 15px;
+    /*border: 1px solid black;*/
+
+
+}
+
+.loyer-prix p{
+    color: var(--whiteColor);
+    margin: 6px;
+    font-weight: bold;
+
+}

@@ -1,0 +1,13 @@
+html{
+    --whiteColor: #ffffff;
+    --headerColorText:#0102fd ;
+    --headerMainColor: #ffc10a;
+}
+
+*{
+    margin: 0px 0px;
+    padding: 0px 0px;
+    box-sizing: border-box;
+
+}
+

@@ -1,0 +1,40 @@
+html{
+    --whiteColor: #ffffff;
+    --headerColorText:#0102fd ;
+    --headerMainColor: #ffc10a;
+}
+
+*{
+    margin: 0px 0px;
+    padding: 0px 0px;
+    box-sizing: border-box;
+
+}
+
+
+.header-title{
+    height: 550px;
+    width: 100%;
+    /*border: 5px solid black;*/
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("../images/salon.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 560px;
+    background-attachment: fixed;
+}
+
+.box-title{
+    background-color : rgba(255,255,255,0.9);
+    width: 50%;
+    height: 36%;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /*border: 2px solid blueviolet;*/
+    padding: 10px;
+    color: var(--headerColorText);
+}

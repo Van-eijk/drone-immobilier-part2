@@ -1,0 +1,292 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+html{
+    --headerColorText:#0102fd ;
+    --headerMainColor: #ffc10a;
+    --whiteColor : #ffffff;
+    --backgroundColorLocationPhoto : #f2f2f2 ;
+}
+
+.header-blank-location{
+    height: 70px;
+    width: 100%;
+    background-color: var(--whiteColor);
+
+}
+
+.pub-option{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--headerColorText);
+    color: var(--whiteColor);
+    font-size: large;
+    padding: 10px;
+    position: fixed;
+    z-index: 15;
+    width: 100%;
+    /*height: 100px;*/
+}
+
+.pub-option span{
+    width: 35px;
+    height: 35px;
+    /*border: 1px solid black;*/
+    margin: 1px;
+}
+
+.pub-option span i{
+    font-size: 20px;
+}
+
+.imprimer-fav, .imprimer, .fav, .visite-whatsapp, .visite, .pub-date-header, .num-pub{
+    display: flex;
+    align-items: center;
+    /*border: 1px solid black;*/
+}
+
+.pub-date-header{
+    margin-left: 10px;
+}
+
+.visite{
+    background-color: var(--headerMainColor);
+    padding: 0px 8px 0px 5px;
+    border-radius: 25px;
+}
+
+.imprimer{
+    margin-right: 15px;
+}
+
+.whatsapp-pub a{
+    display : block;
+    text-decoration: none;
+    
+    /*border : 10px solid black;*/
+}
+
+.share-whatsapp{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 10px 0px 10px;
+    /*border: 10px solid red;*/
+    
+}
+
+.share-whatsapp i{
+    color: white;
+    font-size: 40px;
+    
+}
+
+
+.whatsapp-pub span i{
+    font-size: 30px;
+}
+
+.main-details-pub{
+    display: flex;
+    flex-direction: column;
+    padding: 10px 50px 10px 50px;
+    margin-top: 60px;
+    background-color: var(--backgroundColorLocationPhoto) ;
+    /*overflow: auto;*/
+}
+
+.all-picture-pub{
+    display: flex;
+    width: 100%;
+}
+
+.main-picture-pub{
+    /*width: 1500px;*/
+    width: 100%;
+    min-width: 500px;
+    height: 600px;
+    /*border: 10px solid black;*/
+    position: relative;
+    /*z-index: 300;*/
+
+}
+
+
+
+.main-picture-pub img{
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: none;
+    width: 100%;
+    height: 570px;
+    opacity: 0;
+    transition: .5s;
+    cursor: pointer;
+}
+
+.main-picture-pub img.active{
+    opacity: 1;
+    /*z-index: 50;*/
+}
+
+.active{
+    opacity: 1;
+    /*z-index: 50;*/
+}
+
+.bouton-next-prev{
+    position: absolute;
+    left: 0px;
+    top: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    /*border: 2px solid yellow;*/
+    z-index: 14;
+}
+
+.bouton-next-prev button{
+   width: 40px;
+   width: 40px;
+   margin: 0px 4px 0px 4px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   /*border: 10px solid yellow;*/
+   border: none;
+   cursor: pointer;
+   background-color: transparent;
+
+
+}
+
+.bouton-next-prev i{
+    font-size: 30px;
+    color: var(--whiteColor);
+    opacity: 0.8;
+}
+
+.picture-pub{
+    /*border: 2px solid black;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    overflow: auto;
+    max-height: 600px;
+    max-width: 480px;
+    min-width: 150px;
+}
+
+.picture{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 120px;
+    width: 120px;
+    margin: 10px;
+    cursor: pointer;
+    /*border: 20px solid black;*/
+}
+
+.picture img{
+    height: 120px;
+    width: 120px;
+    /*border: 5px solid black;*/
+}
+
+
+.description-pub{
+    /*border: 1px solid black;*/
+    padding: 10px 50px 10px 50px;
+}
+
+.description-header{
+    display: flex;
+    justify-content: space-between;
+    /*border: 2px solid black;*/
+    border-bottom: 3px solid var(--headerMainColor);
+    font-weight: 400;
+}
+
+.titre-caracteristiques{
+    width: 100%;
+}
+
+.titre{
+    /*border: 2px solid red;*/
+    font-weight: 400;
+}
+
+.caracteristique{
+    /*border: 2px solid blue;*/
+    width: 100%;
+    display: flex;
+    margin-top: 5px;
+    /*justify-content: space-between;*/
+}
+
+.caracteristique i{
+    color: var(--headerColorText);
+    font-size: 26px;
+    /*border: 2px solid blue;*/
+
+}
+
+.caracteristique p{
+    text-align: center;
+}
+
+.surface-terrain, .nbre-salon, .nbre-douche, .nbre-cuisine, .nbre-chambre, .nbre-parking, .nbre-autre-piece, .nbre-etage{
+    /*border: 2px solid black;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 5px 10px ;
+    padding: 3px;
+
+}
+
+/*.surface-terrain span{
+    border: 2px solid red;
+
+}
+
+.surface-terrain p{
+    border: 2px solid green;
+
+}*/
+
+.pub-prix-localisation{
+    /*border: 2px solid yellowgreen;*/
+    width: 250px;
+}
+
+.pub-prix{
+    background-color: var(--headerMainColor);
+    color: var(--whiteColor);
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    border-radius: 30px;
+}
+
+.main-description{
+    /*border: 2px solid blue;*/
+    margin-top: 30px;
+}
+
+.main-description p{
+    text-align: justify;
+}

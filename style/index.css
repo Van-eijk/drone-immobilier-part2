@@ -1,0 +1,331 @@
+html{
+    --whiteColor: #ffffff;
+    --headerColorText:#0102fd ;
+    --headerMainColor: #ffc10a;
+    --min-width: 943px ;
+}
+
+*{
+    margin: 0px 0px;
+    padding: 0px 0px;
+    box-sizing: border-box;
+
+}
+
+body{
+    height: 99%;
+    width: 100%;
+    min-width: var(--min-width);
+    
+}
+
+
+.backgroung-presentation{
+    height: 550px;
+    width: 100%;
+    /*border: 5px solid black;*/
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-image: url("../images/salon.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 560px;
+    background-attachment: fixed;
+}
+
+.search-box{
+    /*background-color: var(--whiteColor);*/
+    background-color : rgba(255,255,255,0.9); /* gestion de la transparence */
+    width: 50%;
+    height: 36%;
+    border-radius: 30px;
+    /*opacity: 0.9;*/
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    /*border: 2px solid blueviolet;*/
+    padding: 10px;
+
+}
+
+.search-box form{
+    display: flex;
+    flex-direction: column;
+    /*align-items: center;*/
+    justify-content: space-around;
+    /*border: 2px solid black;*/
+    width: 100%;
+    height: 100%;
+}
+
+.search-box .location-vente{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    /*border: 3px solid yellow;*/
+}
+
+
+.location-vente .location, .location-vente .vente{
+    /*border: 2px solid black;*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    cursor: pointer;
+
+}
+
+.btn-radio{
+    display: none;
+}
+
+.location:hover i{
+    opacity: 0.5;
+    /*color: red;*/
+}
+
+.vente:hover i{
+    opacity: 0.5;
+    /*color: green;*/
+}
+
+
+.location p, .vente p{
+    color: var(--headerColorText);
+    margin-top: 5px;
+}
+
+.location .location-icon, .vente .vente-icon{
+    /*border: 2px solid blueviolet;*/
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    margin-bottom: 5px;
+    background-color: var(--headerColorText);
+    cursor: pointer;
+}
+
+.location-icon i, .vente-icon i{
+    font-size: 31px;
+    color: var(--whiteColor);
+}
+
+.search-box .search-option{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.search-pays, .search-ville, .search-bien, .search-send{
+    /*border: 1px solid black;*/
+    margin: 0px 5px 0px 5px;
+}
+.search-box form select{
+    height: 50px;
+    width: 100%;
+    /*margin: 0px 60px 0px 10px;*/
+    border-radius: 50px;
+    border: 1px solid var(--headerColorText);
+    background-color: var(--whiteColor);
+    opacity: 1;
+    padding: 10px 20px 10px 20px;
+    /*margin: 8px 8px;*/
+}
+
+.search-box form button{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--headerMainColor);
+    border: none;
+    cursor: pointer;
+}
+
+.search-box form button i{
+    font-size: 21px;
+    color: var(--whiteColor);
+    font-weight: bolder;
+}
+
+
+
+.second-part{
+    /*border: 1px solid black;*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 30px 0px 30px 0px;
+    padding: 5px 18px 5px 18px;
+}
+
+.second-part h2{
+    margin: 0px 60px 0px 60px;
+}
+.bloc-droit, .bloc-gauche{
+    border: none;
+    border-top: 2px solid var(--headerColorText);
+    width: 30%;
+}
+
+.services-slide{
+    height: 550px;
+    /*border: 10px solid blue;*/
+    padding: 0px 0px 0px 0px;
+    position: relative;
+}
+
+.services-slide img{
+    object-fit: cover;
+    width: 100%;
+    height: 550px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: .5s;
+
+}
+
+.services-slide img.active{
+    opacity: 1;
+}
+/*.active{
+    opacity: 1;
+}
+.test{
+    border: 50px solid greenyellow;
+}*/
+.suivant, .precedent{
+    color: #fff;
+    font-size: 3rem;
+    position: absolute;
+    top: 50%;
+    /*transform: translate(-50%);*/
+    cursor: pointer;
+}
+
+.suivant{
+    right: 1rem;
+}
+
+.precedent{
+    left: 1rem;
+}
+
+.step-slide{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    z-index: 10;
+    /*border: 1px solid black;*/
+    bottom: 17px;
+    width: 100%;
+}
+
+.step{
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+    background-color: var(--headerMainColor);
+    margin: 0px 8px 0px 8px;
+    opacity: 0.5;
+    transition: .5s;
+}
+
+.min-presentation{
+    margin-top: 100px;
+    /*border: 1px solid black;*/
+    padding: 5px 100px 5px 100px;
+
+}
+
+.min-presentation p{
+    text-align: justify;
+    line-height: 30px;
+
+    font-size: larger;
+}
+
+.main-service-img{
+    overflow: auto;
+}
+
+.img-service{
+    margin-top: 100px;
+    margin-bottom: 50px;
+    padding: 1px 5px;
+    min-width: 1230px;
+    /*border: 1px solid black;*/
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.img-service .img{
+    height: 230px;
+    width: 230px;
+    border-radius: 30px;
+    margin: 5px;
+    position: relative;
+    box-shadow: 0px 0px 5px black;
+}
+
+.img-service .img img{
+    height: 230px;
+    width: 230px;
+    border-radius: 30px;
+
+}
+
+.img-service .action{
+    /*border: 1px solid black;*/
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 20px;
+    left: 0px;
+    width: 100%;
+
+}
+
+.img-service .img a{
+    display: inline-block;
+    border: none;
+    text-decoration: none;
+    background-color: var(--headerColorText);
+    border-radius: 20px;
+    margin: 2px 5px;
+    padding: 2px 6px;
+    color: var(--whiteColor);
+    font-weight: 500;
+
+}
+
+.second-presentation{
+    /*border: 1px solid black;*/
+    margin-top: 50px;
+    padding: 5px 40px;
+    margin-bottom: 60px;
+}
+
+.main-second-presentation{
+   /* border: 2px solid black;*/
+    padding: 15px 25px;
+    box-shadow: 2px 2px 15px black;
+
+}
+
+.second-presentation p{
+    font-size: larger;
+    text-align: justify;
+    line-height: 30px;
+}
