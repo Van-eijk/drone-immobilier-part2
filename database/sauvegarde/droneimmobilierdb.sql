@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : ven. 15 mars 2024 à 10:58
--- Version du serveur : 8.2.0
--- Version de PHP : 8.2.13
+-- Généré le : sam. 26 oct. 2024 à 22:42
+-- Version du serveur : 8.3.0
+-- Version de PHP : 8.2.18
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -31,10 +31,10 @@ DROP TABLE IF EXISTS `admin`;
 CREATE TABLE IF NOT EXISTS `admin` (
   `id_admin` int NOT NULL AUTO_INCREMENT,
   `id_membreFK` int NOT NULL,
-  `poste` enum('admin','adjoint') DEFAULT 'adjoint',
+  `poste` enum('admin','adjoint') COLLATE utf8mb4_unicode_ci DEFAULT 'adjoint',
   PRIMARY KEY (`id_admin`),
   KEY `fk_admin` (`id_membreFK`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Déchargement des données de la table `admin`
@@ -54,32 +54,31 @@ DROP TABLE IF EXISTS `bien`;
 CREATE TABLE IF NOT EXISTS `bien` (
   `id_Bien` int NOT NULL AUTO_INCREMENT,
   `id_adminFK` int NOT NULL,
-  `reference_bien` varchar(150) NOT NULL,
-  `titre_bien` varchar(250) NOT NULL,
-  `description_bien` text NOT NULL,
+  `reference_bien` varchar(150) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `titre_bien` varchar(250) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `description_bien` mediumtext COLLATE utf8mb4_unicode_ci NOT NULL,
   `parking` int NOT NULL DEFAULT '0',
-  `location_vente` enum('location','vente') DEFAULT 'location',
+  `location_vente` enum('location','vente') COLLATE utf8mb4_unicode_ci DEFAULT 'location',
   `prix_bien` float NOT NULL,
-  `pays_bien` varchar(250) NOT NULL,
-  `ville_bien` varchar(250) NOT NULL,
-  `quartier_bien` varchar(150) NOT NULL,
-  `telephone_proprietaire` varchar(25) NOT NULL,
+  `pays_bien` varchar(250) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `ville_bien` varchar(250) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `quartier_bien` varchar(150) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `telephone_proprietaire` varchar(25) COLLATE utf8mb4_unicode_ci NOT NULL,
   `date_time_bien` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
-  `lien_photo1` text NOT NULL,
+  `lien_photo1` mediumtext COLLATE utf8mb4_unicode_ci NOT NULL,
   PRIMARY KEY (`id_Bien`),
   KEY `fk_bien` (`id_adminFK`)
-) ENGINE=InnoDB AUTO_INCREMENT=55 DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=64 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Déchargement des données de la table `bien`
 --
 
 INSERT INTO `bien` (`id_Bien`, `id_adminFK`, `reference_bien`, `titre_bien`, `description_bien`, `parking`, `location_vente`, `prix_bien`, `pays_bien`, `ville_bien`, `quartier_bien`, `telephone_proprietaire`, `date_time_bien`, `lien_photo1`) VALUES
-(50, 1, 'Magasin150324091810', 'Bureaux à louer', 'kslmsdndscssiefkf,if,ef,ek,fkef,\r\n                                ', 1, 'location', 20000, 'Cameroun', 'Douala', 'Bonanjo', '653695347', '2024-03-15 09:18:10', '[\"ImagesSauv\\/Bureaux \\u00e0 louer150324091810_1\",\"ImagesSauv\\/Bureaux \\u00e0 louer150324091810_2\",\"ImagesSauv\\/Bureaux \\u00e0 louer150324091810_3\",\"ImagesSauv\\/Bureaux \\u00e0 louer150324091810_4\",\"ImagesSauv\\/Bureaux \\u00e0 louer150324091810_5\",\"ImagesSauv\\/Bureaux \\u00e0 louer150324091810_6\",\"ImagesSauv\\/Bureaux \\u00e0 louer150324091810_7\",\"ImagesSauv\\/Bureaux \\u00e0 louer150324091810_8\",\"ImagesSauv\\/Bureaux \\u00e0 louer150324091810_9\",\"ImagesSauv\\/Bureaux \\u00e0 louer150324091810_10\",\"ImagesSauv\\/Bureaux \\u00e0 louer150324091810_11\",\"ImagesSauv\\/Bureaux \\u00e0 louer150324091810_12\",\"ImagesSauv\\/Bureaux \\u00e0 louer150324091810_13\",\"ImagesSauv\\/Bureaux \\u00e0 louer150324091810_14\",\"ImagesSauv\\/Bureaux \\u00e0 louer150324091810_15\",\"ImagesSauv\\/Bureaux \\u00e0 louer150324091810_16\",\"ImagesSauv\\/Bureaux \\u00e0 louer150324091810_17\",\"ImagesSauv\\/Bureaux \\u00e0 louer150324091810_18\",\"ImagesSauv\\/Bureaux \\u00e0 louer150324091810_19\",\"ImagesSauv\\/Bureaux \\u00e0 louer150324091810_20\"]'),
-(51, 1, 'Villa150324100027', 'Villa de luxe à vendre', 'Villa de luxe située au centre de la ville de Yaounde dans un quartier residentiel\r\n                                ', 1, 'vente', 0, 'Cameroun', 'Yaounde', 'Bastos', '653695347', '2024-03-15 10:00:27', '[\"ImagesSauv\\/Villa de luxe \\u00e0 vendre150324100027_1\",\"ImagesSauv\\/Villa de luxe \\u00e0 vendre150324100027_2\",\"ImagesSauv\\/Villa de luxe \\u00e0 vendre150324100027_3\",\"ImagesSauv\\/Villa de luxe \\u00e0 vendre150324100027_4\",\"ImagesSauv\\/Villa de luxe \\u00e0 vendre150324100027_5\",\"ImagesSauv\\/Villa de luxe \\u00e0 vendre150324100027_6\",\"ImagesSauv\\/Villa de luxe \\u00e0 vendre150324100027_7\",\"ImagesSauv\\/Villa de luxe \\u00e0 vendre150324100027_8\",\"ImagesSauv\\/Villa de luxe \\u00e0 vendre150324100027_9\",\"ImagesSauv\\/Villa de luxe \\u00e0 vendre150324100027_10\",\"ImagesSauv\\/Villa de luxe \\u00e0 vendre150324100027_11\",\"ImagesSauv\\/Villa de luxe \\u00e0 vendre150324100027_12\",\"ImagesSauv\\/Villa de luxe \\u00e0 vendre150324100027_13\",\"ImagesSauv\\/Villa de luxe \\u00e0 vendre150324100027_14\",\"ImagesSauv\\/Villa de luxe \\u00e0 vendre150324100027_15\",\"ImagesSauv\\/Villa de luxe \\u00e0 vendre150324100027_16\",\"ImagesSauv\\/Villa de luxe \\u00e0 vendre150324100027_17\",\"ImagesSauv\\/Villa de luxe \\u00e0 vendre150324100027_18\",\"ImagesSauv\\/Villa de luxe \\u00e0 vendre150324100027_19\",\"ImagesSauv\\/Villa de luxe \\u00e0 vendre150324100027_20\"]'),
-(52, 1, 'Chambre150324100251', 'Chambre simple à louer', '\r\n              Chambre moderne à louer situé en bordure de route                  ', 1, 'location', 25000, 'Cameroun', 'Yaounde', 'Messassi', '653695347', '2024-03-15 10:02:51', '[\"ImagesSauv\\/Chambre simple \\u00e0 louer150324100251_1\",\"ImagesSauv\\/Chambre simple \\u00e0 louer150324100251_2\",\"ImagesSauv\\/Chambre simple \\u00e0 louer150324100251_3\",\"ImagesSauv\\/Chambre simple \\u00e0 louer150324100251_4\",\"ImagesSauv\\/Chambre simple \\u00e0 louer150324100251_5\",\"ImagesSauv\\/Chambre simple \\u00e0 louer150324100251_6\",\"ImagesSauv\\/Chambre simple \\u00e0 louer150324100251_7\",\"ImagesSauv\\/Chambre simple \\u00e0 louer150324100251_8\",\"ImagesSauv\\/Chambre simple \\u00e0 louer150324100251_9\",\"ImagesSauv\\/Chambre simple \\u00e0 louer150324100251_10\",\"ImagesSauv\\/Chambre simple \\u00e0 louer150324100251_11\",\"ImagesSauv\\/Chambre simple \\u00e0 louer150324100251_12\",\"ImagesSauv\\/Chambre simple \\u00e0 louer150324100251_13\",\"ImagesSauv\\/Chambre simple \\u00e0 louer150324100251_14\"]'),
-(53, 1, 'Immeuble150324101308', 'Immeuble à vendre', 'Immeuble à vendre avec un prix très doux\r\n                                ', 1, 'vente', 2000000, 'Cameroun', 'Yaounde', 'Messassi', '653695347', '2024-03-15 10:13:08', '[\"ImagesSauv\\/Immeuble \\u00e0 vendre150324101308_1\",\"ImagesSauv\\/Immeuble \\u00e0 vendre150324101308_2\",\"ImagesSauv\\/Immeuble \\u00e0 vendre150324101308_3\",\"ImagesSauv\\/Immeuble \\u00e0 vendre150324101308_4\",\"ImagesSauv\\/Immeuble \\u00e0 vendre150324101308_5\",\"ImagesSauv\\/Immeuble \\u00e0 vendre150324101308_6\",\"ImagesSauv\\/Immeuble \\u00e0 vendre150324101308_7\",\"ImagesSauv\\/Immeuble \\u00e0 vendre150324101308_8\",\"ImagesSauv\\/Immeuble \\u00e0 vendre150324101308_9\"]'),
-(54, 1, 'Terrain150324103655', 'Terrain à vendre bon prix', '\r\n       Terrain plat à vendre                         ', 0, 'vente', 500000, 'Cameroun', 'Douala', 'Yassa', '653695347', '2024-03-15 10:36:55', '[\"ImagesSauv\\/Terrain \\u00e0 vendre bon prix150324103655_1\",\"ImagesSauv\\/Terrain \\u00e0 vendre bon prix150324103655_2\",\"ImagesSauv\\/Terrain \\u00e0 vendre bon prix150324103655_3\",\"ImagesSauv\\/Terrain \\u00e0 vendre bon prix150324103655_4\",\"ImagesSauv\\/Terrain \\u00e0 vendre bon prix150324103655_5\",\"ImagesSauv\\/Terrain \\u00e0 vendre bon prix150324103655_6\",\"ImagesSauv\\/Terrain \\u00e0 vendre bon prix150324103655_7\",\"ImagesSauv\\/Terrain \\u00e0 vendre bon prix150324103655_8\",\"ImagesSauv\\/Terrain \\u00e0 vendre bon prix150324103655_9\"]');
+(60, 1, 'Terrain010624122622', 'Terrain Ã  vendre ', 'J\'étais là où tu étais', 0, 'vente', 12000, 'Cameroun ', 'yaounde', 'Manassa (sur la route Awea-Mfou)', '678879197', '2024-05-31 22:26:22', '[\"imagesSauv\\/Terrain \\u00e0 vendre 010624122622_1\",\"imagesSauv\\/Terrain \\u00e0 vendre 010624122622_2\",\"imagesSauv\\/Terrain \\u00e0 vendre 010624122622_3\",\"imagesSauv\\/Terrain \\u00e0 vendre 010624122622_4\",\"imagesSauv\\/Terrain \\u00e0 vendre 010624122622_5\",\"imagesSauv\\/Terrain \\u00e0 vendre 010624122622_6\",\"imagesSauv\\/Terrain \\u00e0 vendre 010624122622_7\"]'),
+(61, 1, 'Appartement010624010157', 'Appartement meublÃ© Ã  louer ', 'J\'étais là où tu étais', 1, 'location', 60000, 'Cameroun ', 'yaounde', 'Jouvence ', '678879197', '2024-05-31 23:01:57', '[\"imagesSauv\\/Appartement meubl\\u00e9 \\u00e0 louer 010624010157_1\",\"imagesSauv\\/Appartement meubl\\u00e9 \\u00e0 louer 010624010157_2\",\"imagesSauv\\/Appartement meubl\\u00e9 \\u00e0 louer 010624010157_3\",\"imagesSauv\\/Appartement meubl\\u00e9 \\u00e0 louer 010624010157_4\",\"imagesSauv\\/Appartement meubl\\u00e9 \\u00e0 louer 010624010157_5\",\"imagesSauv\\/Appartement meubl\\u00e9 \\u00e0 louer 010624010157_6\",\"imagesSauv\\/Appartement meubl\\u00e9 \\u00e0 louer 010624010157_7\",\"imagesSauv\\/Appartement meubl\\u00e9 \\u00e0 louer 010624010157_8\",\"imagesSauv\\/Appartement meubl\\u00e9 \\u00e0 louer 010624010157_9\",\"imagesSauv\\/Appartement meubl\\u00e9 \\u00e0 louer 010624010157_10\",\"imagesSauv\\/Appartement meubl\\u00e9 \\u00e0 louer 010624010157_11\",\"imagesSauv\\/Appartement meubl\\u00e9 \\u00e0 louer 010624010157_12\",\"imagesSauv\\/Appartement meubl\\u00e9 \\u00e0 louer 010624010157_13\",\"imagesSauv\\/Appartement meubl\\u00e9 \\u00e0 louer 010624010157_14\",\"imagesSauv\\/Appartement meubl\\u00e9 \\u00e0 louer 010624010157_15\",\"imagesSauv\\/Appartement meubl\\u00e9 \\u00e0 louer 010624010157_16\",\"imagesSauv\\/Appartement meubl\\u00e9 \\u00e0 louer 010624010157_17\",\"imagesSauv\\/Appartement meubl\\u00e9 \\u00e0 louer 010624010157_18\",\"imagesSauv\\/Appartement meubl\\u00e9 \\u00e0 louer 010624010157_19\",\"imagesSauv\\/Appartement meubl\\u00e9 \\u00e0 louer 010624010157_20\"]'),
+(62, 1, 'Immeuble040624112104', 'Immeuble Ã  louer', 'J\'étais là où tu étais', 1, 'location', 4000000, 'Cameroun ', 'yaounde', 'Bastos', '697077302', '2024-06-04 09:21:04', '[\"imagesSauv\\/Immeuble \\u00e0 louer040624112104_1\",\"imagesSauv\\/Immeuble \\u00e0 louer040624112104_2\",\"imagesSauv\\/Immeuble \\u00e0 louer040624112104_3\",\"imagesSauv\\/Immeuble \\u00e0 louer040624112104_4\",\"imagesSauv\\/Immeuble \\u00e0 louer040624112104_5\",\"imagesSauv\\/Immeuble \\u00e0 louer040624112104_6\",\"imagesSauv\\/Immeuble \\u00e0 louer040624112104_7\",\"imagesSauv\\/Immeuble \\u00e0 louer040624112104_8\",\"imagesSauv\\/Immeuble \\u00e0 louer040624112104_9\",\"imagesSauv\\/Immeuble \\u00e0 louer040624112104_10\"]'),
+(63, 1, '040624113159', 'Studio moderne', 'J\'étais là où tu étais', 1, 'location', 80000, 'Cameroun ', 'yaounde', 'TKC', '697077302', '2024-06-04 09:31:59', '[\"imagesSauv\\/Studio moderne040624113159_1\",\"imagesSauv\\/Studio moderne040624113159_2\",\"imagesSauv\\/Studio moderne040624113159_3\",\"imagesSauv\\/Studio moderne040624113159_4\",\"imagesSauv\\/Studio moderne040624113159_5\",\"imagesSauv\\/Studio moderne040624113159_6\",\"imagesSauv\\/Studio moderne040624113159_7\"]');
 
 -- --------------------------------------------------------
 
@@ -92,18 +91,11 @@ CREATE TABLE IF NOT EXISTS `chambre` (
   `id_chambre` int NOT NULL AUTO_INCREMENT,
   `id_bienFK` int NOT NULL,
   `superficie_chambre` float DEFAULT NULL,
-  `moderne_chambre` enum('OUI','NON') DEFAULT 'OUI',
-  `cuisine_chambre` enum('OUI','NON') DEFAULT 'NON',
+  `moderne_chambre` enum('OUI','NON') COLLATE utf8mb4_unicode_ci DEFAULT 'OUI',
+  `cuisine_chambre` enum('OUI','NON') COLLATE utf8mb4_unicode_ci DEFAULT 'NON',
   PRIMARY KEY (`id_chambre`),
   KEY `fk_chambre` (`id_bienFK`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb3;
-
---
--- Déchargement des données de la table `chambre`
---
-
-INSERT INTO `chambre` (`id_chambre`, `id_bienFK`, `superficie_chambre`, `moderne_chambre`, `cuisine_chambre`) VALUES
-(3, 52, 100, 'OUI', 'OUI');
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -120,7 +112,7 @@ CREATE TABLE IF NOT EXISTS `favoris` (
   PRIMARY KEY (`id_favoris`),
   KEY `fk_favoris_bien` (`id_bienFK`),
   KEY `fk_favoris_membre` (`id_membreFK`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -136,14 +128,14 @@ CREATE TABLE IF NOT EXISTS `immeuble` (
   `nbre_etage` int NOT NULL,
   PRIMARY KEY (`id_immeuble`),
   KEY `fk_immeuble` (`id_bienFK`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Déchargement des données de la table `immeuble`
 --
 
 INSERT INTO `immeuble` (`id_immeuble`, `id_bienFK`, `superficie_terrain_immeuble`, `nbre_etage`) VALUES
-(1, 53, 3000, 5);
+(2, 62, 1200, 2);
 
 -- --------------------------------------------------------
 
@@ -159,14 +151,7 @@ CREATE TABLE IF NOT EXISTS `magasin` (
   `nombre_piece_magasin` int NOT NULL,
   PRIMARY KEY (`id_magasin`),
   KEY `fk_magasin` (`id_bienFK`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb3;
-
---
--- Déchargement des données de la table `magasin`
---
-
-INSERT INTO `magasin` (`id_magasin`, `id_bienFK`, `superficie_magasin`, `nombre_piece_magasin`) VALUES
-(7, 50, 50, 2);
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -183,18 +168,19 @@ CREATE TABLE IF NOT EXISTS `maison` (
   `nbre_cuisine` int NOT NULL DEFAULT '0',
   `nbre_salon` int NOT NULL DEFAULT '0',
   `nbre_douche` int NOT NULL DEFAULT '0',
-  `type_maison` enum('studio','appartement','maison','villa') DEFAULT NULL,
+  `type_maison` enum('studio','appartement','maison','villa') COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `superficie_terrain` float DEFAULT '0',
   PRIMARY KEY (`id_maison`),
   KEY `fk_maison` (`id_bienFK`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Déchargement des données de la table `maison`
 --
 
 INSERT INTO `maison` (`id_maison`, `id_bienFK`, `nbre_piece`, `nbre_chambre`, `nbre_cuisine`, `nbre_salon`, `nbre_douche`, `type_maison`, `superficie_terrain`) VALUES
-(10, 51, 2, 6, 3, 3, 7, 'villa', 2000);
+(11, 61, 6, 2, 1, 1, 2, 'appartement', 0),
+(12, 63, 0, 1, 1, 1, 1, '', 0);
 
 -- --------------------------------------------------------
 
@@ -206,16 +192,16 @@ DROP TABLE IF EXISTS `membre`;
 CREATE TABLE IF NOT EXISTS `membre` (
   `id_membre` int NOT NULL AUTO_INCREMENT,
   `id_visiteur_FK` int NOT NULL,
-  `nom_membre` varchar(50) NOT NULL,
-  `prenom_membre` varchar(50) DEFAULT NULL,
-  `phone_membre` varchar(25) NOT NULL,
-  `email_membre` varchar(100) NOT NULL,
-  `pays_membre` varchar(100) NOT NULL,
-  `ville_membre` varchar(100) NOT NULL,
-  `mdp_membre` varchar(255) NOT NULL,
+  `nom_membre` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `prenom_membre` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `phone_membre` varchar(25) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `email_membre` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `pays_membre` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `ville_membre` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `mdp_membre` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   PRIMARY KEY (`id_membre`),
   KEY `fk_membre` (`id_visiteur_FK`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Déchargement des données de la table `membre`
@@ -237,15 +223,15 @@ DROP TABLE IF EXISTS `service`;
 CREATE TABLE IF NOT EXISTS `service` (
   `id_service` int NOT NULL AUTO_INCREMENT,
   `id_adminFK` int NOT NULL,
-  `reference_service` varchar(200) NOT NULL,
-  `titre_service` varchar(250) DEFAULT NULL,
-  `description_service` text,
-  `lien_photo_service` varchar(255) DEFAULT NULL,
-  `categorie_service` varchar(200) NOT NULL,
+  `reference_service` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `titre_service` varchar(250) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `description_service` mediumtext COLLATE utf8mb4_unicode_ci,
+  `lien_photo_service` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `categorie_service` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL,
   `date_time_service` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id_service`),
   KEY `fk_service` (`id_adminFK`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Déchargement des données de la table `service`
@@ -270,14 +256,14 @@ CREATE TABLE IF NOT EXISTS `terrain` (
   `superficie_terrain` float NOT NULL,
   PRIMARY KEY (`id_terrain`),
   KEY `fk_terrain` (`id_bienFK`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Déchargement des données de la table `terrain`
 --
 
 INSERT INTO `terrain` (`id_terrain`, `id_bienFK`, `superficie_terrain`) VALUES
-(4, 54, 2500);
+(6, 60, 7000);
 
 -- --------------------------------------------------------
 
@@ -288,10 +274,10 @@ INSERT INTO `terrain` (`id_terrain`, `id_bienFK`, `superficie_terrain`) VALUES
 DROP TABLE IF EXISTS `visiteur`;
 CREATE TABLE IF NOT EXISTS `visiteur` (
   `id_visiteur` int NOT NULL AUTO_INCREMENT,
-  `adresse_ip` varchar(250) DEFAULT NULL,
+  `adresse_ip` varchar(250) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `datevisiteur` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id_visiteur`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Déchargement des données de la table `visiteur`
