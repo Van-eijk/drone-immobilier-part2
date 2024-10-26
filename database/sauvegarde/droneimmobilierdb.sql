@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : sam. 26 oct. 2024 à 22:42
+-- Généré le : sam. 26 oct. 2024 à 23:05
 -- Version du serveur : 8.3.0
 -- Version de PHP : 8.2.18
 
@@ -209,7 +209,7 @@ CREATE TABLE IF NOT EXISTS `membre` (
 
 INSERT INTO `membre` (`id_membre`, `id_visiteur_FK`, `nom_membre`, `prenom_membre`, `phone_membre`, `email_membre`, `pays_membre`, `ville_membre`, `mdp_membre`) VALUES
 (1, 1, 'van', 'vanprenom', '237653695347', 'van2021@outlook.fr', 'canada', 'montreal', '9cf95dacd226dcf43da376cdb6cbba7035218921'),
-(2, 2, 'bobo', 'boboprenom', '237695740639', 'bobo2021@outloo.fr', 'usa', 'newyork', '9cf95dacd226dcf43da376cdb6cbba7035218921'),
+(2, 2, 'Constantin', 'Constantin', '237678879197', 'droneimmobilier03@gmail.com', 'usa', 'newyork', '9cf95dacd226dcf43da376cdb6cbba7035218921'),
 (3, 3, 'junior', 'juniorprenom', '237651006953', 'junior2021@outloo.fr', 'mboa', 'yaounde', '9cf95dacd226dcf43da376cdb6cbba7035218921'),
 (4, 4, 'alice', 'aliceprenom', '237656857450', 'alice2021@outloo.fr', 'belgique', 'bruxelle', '9cf95dacd226dcf43da376cdb6cbba7035218921');
 
