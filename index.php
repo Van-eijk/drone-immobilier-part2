@@ -75,7 +75,9 @@
                 <div class="search-option">
                     <div class="search-pays">
                         <select name="searchPays" id="">
-                            <option value="Cameroun" selected = "selected" >Cameroun</option>
+                            <option value="">Pays</option>
+
+                            <option value="Cameroun" >Cameroun</option>
                             
 
                         </select>
@@ -84,9 +86,83 @@
 
                     <div class="search-ville">
                         <select name="searchVille" id="">
-                            <option value="Yaounde" selected = "selected" >Yaounde</option>
+                            <option value="">Ville</option>
+
+                            <option value="Abong Mbang">Abong Mbang</option>
+                            <option value="Akonolinga">Akonolinga</option>
+                            <option value="Bafang">Bafang</option>
+                            <option value="Bafia">Bafia</option>
+                            <option value="Bafoussam">Bafoussam</option>
+                            <option value="Bangangté">Bangangté</option>
+                            <option value="Bamenda">Bamenda</option>
+                            <option value="Bali">Bali</option>
+                            <option value="Banyo">Banyo</option>
+                            <option value="Batouri">Batouri</option>
+                            <option value="Bélabo">Bélabo</option>
+
+                            <option value="Buea">Buea</option>
+
+                            <option value="Bertoua">Bertoua</option>
                             <option value="Douala">Douala</option>
-                            
+                            <option value="Dschang">Dschang</option>
+
+                            <option value="Edea">Edea</option>
+                            <option value="Ebolowa">Ebolowa</option>
+
+                            <option value="Foumban">Foumban</option>
+                            <option value="Foumbot">Foumbot</option>
+
+                            <option value="Fundong">Fundong</option>
+
+                            <option value="Garoua">Garoua</option>
+                            <option value="Guider">Guider</option>
+
+                            <option value="Kaele">Kaele</option>
+                            <option value="Kambe">Kambe</option>
+
+                            <option value="Kousserie">Kousserie</option>
+
+                            <option value="Kribi">Kribi</option>
+                            <option value="Kumba">Kumba</option>
+                            <option value="Kumbo">Kumbo</option>
+
+                            <option value="Limbé">Limbé</option>
+                            <option value="Loum">Loum</option>
+                            <option value="Manjo">Manjo</option>
+                            <option value="Mamfé">Mamfé</option>
+
+
+
+
+
+                            <option value="Maroua">Maroua</option>
+                            <option value="Mbalmayo">Mbalmayo</option>
+
+                            <option value="Mbanga">Mbanga</option>
+
+                            <option value="Mbouda">Mbouda</option>
+                            <option value="Meiganga">Meiganga</option>
+
+                            <option value="Melong">Melong</option>
+                            <option value="Mokolo">Mokolo</option>
+
+                            <option value="Mora">Mora</option>
+                            <option value="Nanga Eboko">Nanga Eboko</option>
+                            <option value="Ndop">Ndop</option>
+
+                            <option value="Ngaoundéré">Ngaoundéré</option>
+                            <option value="Nkongsamba">Nkongsamba</option>
+                            <option value="Sangmelima">Sangmelima</option>
+                            <option value="Wum">Wum</option>
+
+                            <option value="Tibati">Tibati</option>
+
+                            <option value="Yabassi">Yabassi</option>
+                            <option value="Yagoua">Yagoua</option>
+
+                            <option value="Yaoundé">Yaoundé</option>
+                            <option value="Yokadouma">Yokadouma</option>
+
 
                         </select>
                     </div>
@@ -94,7 +170,9 @@
 
                     <div class="search-bien">
                         <select name="searchTypeBien" id="">
-                            <option value="Studio" selected = "selected" >Studio</option>
+                            <option value="" >Type de bien</option>
+
+                            <option value="Studio">Studio</option>
                             <option value="Chambre">Chambre</option>
                             <option value="Appartement">Appartement</option>
                             <option value="Maison">Maison</option>

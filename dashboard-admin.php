@@ -57,7 +57,7 @@
                     
                     </a>
 
-                    <a href="" class="content-item" id="addPub" title="Liste des biens">
+                    <a href="list-bien.php" class="content-item" id="addPub" title="Liste des biens">
                         <span><i class="fa-solid fa-file-invoice"></i></span>
                         <p>Biens</p>
                     
